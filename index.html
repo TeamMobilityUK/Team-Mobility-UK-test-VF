@@ -305,7 +305,7 @@
 			<li><a href="https://wcpp.org.uk/wp-content/uploads/2025/10/Dr-Didier-van-de-Velde-Netherlands-Analysing-public-transport-governance.pdf" target="_blank" class="button wide primary">Download our report</a></li>
 		</ul>
 			<ul class="actions">
-	<li><a href="Ref_PT.pdf" download class="button wide primary">Publication about us</a></li>
+	<li><a href="Ref_PT.pdf" download class="button wide primary" onclick="telechargerPublications(event)">Publication about us</a></li>
 </ul>
 	</div>
 	</div>
@@ -691,6 +691,24 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<footer id="footer">
 				<p>&copy; 2026 Trans-Missions, trading as Team Mobility UK. All rights reserved. | <a href="Legal Information.pdf" target="_blank">Legal Information</a></p>
 			</footer>
+
+			<!-- Téléchargement des deux publications -->
+			<script>
+				function telechargerPublications(e) {
+					e.preventDefault();
+					var fichiers = ["Ref_PT.pdf", "Passenger-Transport_Team-Mobility-UK_German-Franchising-Model.pdf"];
+					fichiers.forEach(function (url, i) {
+						setTimeout(function () {
+							var lien = document.createElement("a");
+							lien.href = url;
+							lien.download = "";
+							document.body.appendChild(lien);
+							lien.click();
+							lien.remove();
+						}, i * 800);
+					});
+				}
+			</script>
 
 	</body>
 
