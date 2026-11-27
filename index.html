@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
 <head>
 	<title>Team Mobility UK | Bus Franchising & Transport Strategy Consultancy</title>
 	<meta charset="utf-8" />
@@ -149,7 +149,14 @@
 		.visit img { width: 100%; height: 180px; object-fit: cover; background: #E7EDF4; }
 		.visit-body { padding: 24px; display: flex; flex-direction: column; gap: 8px; }
 		.visit h3 { margin: 0; font-size: 22px; }
-		.visit a { font-weight: 600; margin-top: 8px; }
+		.visit-body { flex: 1; }
+		.visit-tag { align-self: flex-start; font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--link); background: var(--light); border-radius: 999px; padding: 4px 10px; }
+		.visit-desc { margin: 0; font-size: 15px; line-height: 1.55; color: var(--muted); }
+		.visit-meta { margin: 0; font-size: 13px; color: var(--muted); padding-top: 10px; border-top: 1px solid var(--line); margin-top: 6px; }
+		.visit-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; margin-top: auto; padding-top: 12px; }
+		.visit-actions a { font-weight: 600; }
+		.visit-btn { background: var(--accent); color: var(--navy); text-decoration: none; padding: 10px 16px; border-radius: 8px; font-size: 15px; }
+		.visit-btn:hover { color: var(--navy); filter: brightness(1.05); }
 
 		/* Outils */
 		.tools { background: var(--blue); color: #FFFFFF; }
@@ -205,6 +212,14 @@
 			.btn-navy { font-size: 16px; padding: 14px 22px; }
 		}
 	</style>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:_dlc_DocId msdt:dt="string">5TQF7KKPKRTY-1383703142-421601</mso:_dlc_DocId>
+<mso:_dlc_DocIdItemGuid msdt:dt="string">6f78724b-34e9-4831-80cf-2b8805bb1a00</mso:_dlc_DocIdItemGuid>
+<mso:_dlc_DocIdUrl msdt:dt="string">https://transmissionsfr.sharepoint.com/_layouts/15/DocIdRedir.aspx?ID=5TQF7KKPKRTY-1383703142-421601, 5TQF7KKPKRTY-1383703142-421601</mso:_dlc_DocIdUrl>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
 </head>
 <body>
 
@@ -320,27 +335,45 @@
 	<!-- VISITES D'ÉTUDE -->
 	<section id="visits" class="wrap section">
 		<h2 class="h2">Study visits in France</h2>
-		<p class="intro">See how French authorities run franchised bus networks, from a large metropolis to small towns.</p>
+		<p class="intro">See how French authorities run franchised bus networks, from a large metropolis to small towns. Each programme is organised with the local transport authority and can be tailored to your needs.</p>
 		<div class="visits-grid">
 			<div class="visit">
 				<img src="images/Lyon.jpeg" alt="Bus network in Lyon, France" />
 				<div class="visit-body">
+					<span class="visit-tag">Large metropolis</span>
 					<h3>Lyon</h3>
-					<a href="Study_Visit_Lyon_France_January_2026.pdf" target="_blank">Programme (PDF)</a>
+					<p class="visit-desc">How a major metropolitan authority split its network into two competitive franchise lots (bus and metro/light rail) under one unified brand.</p>
+					<p class="visit-meta">1 or 2 days · Briefing at SYTRAL + field visit</p>
+					<div class="visit-actions">
+						<a href="mailto:contact@team-mobility.uk?subject=Study%20visit%20%E2%80%93%20Lyon" class="visit-btn">Register your interest</a>
+						<a href="Study_Visit_Lyon_France_January_2026.pdf" target="_blank">Programme (PDF)</a>
+					</div>
 				</div>
 			</div>
 			<div class="visit">
 				<img src="images/Sélestat.jpeg" alt="Bus services in Sélestat, France" />
 				<div class="visit-body">
+					<span class="visit-tag">Rural combined authority</span>
 					<h3>Sélestat</h3>
-					<a href="Study_Visit_Selestat_France_January_2026.pdf" target="_blank">Programme (PDF)</a>
+					<p class="visit-desc">How four rural districts joined forces in a new combined authority to franchise one bus network, including demand-responsive services.</p>
+					<p class="visit-meta">1 day · Briefing at City Hall + field visit</p>
+					<div class="visit-actions">
+						<a href="mailto:contact@team-mobility.uk?subject=Study%20visit%20%E2%80%93%20S%C3%A9lestat" class="visit-btn">Register your interest</a>
+						<a href="Study_Visit_Selestat_France_January_2026.pdf" target="_blank">Programme (PDF)</a>
+					</div>
 				</div>
 			</div>
 			<div class="visit">
 				<img src="images/Narbonne.jpeg" alt="Bus network in Narbonne, France" />
 				<div class="visit-body">
+					<span class="visit-tag">Urban and coastal network</span>
 					<h3>Narbonne</h3>
-					<a href="Study_Visit_Narbonne_France_January_2026.pdf" target="_blank">Programme (PDF)</a>
+					<p class="visit-desc">How a town and its coastline merged urban and interurban buses into a single contract, with lessons from its 2025 renewal.</p>
+					<p class="visit-meta">1 day · Briefing at City Hall + field visit</p>
+					<div class="visit-actions">
+						<a href="mailto:contact@team-mobility.uk?subject=Study%20visit%20%E2%80%93%20Narbonne" class="visit-btn">Register your interest</a>
+						<a href="Study_Visit_Narbonne_France_January_2026.pdf" target="_blank">Programme (PDF)</a>
+					</div>
 				</div>
 			</div>
 		</div>
