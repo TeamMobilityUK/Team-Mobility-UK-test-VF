@@ -170,7 +170,30 @@
 
 		/* Références */
 		.references .intro { margin-bottom: 32px; }
-		.logos { border: 1px solid var(--line); border-radius: 12px; padding: 24px; margin-bottom: 24px; }
+		.ref-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; background: var(--light); border-radius: 14px; padding: 28px 32px; margin-bottom: 40px; }
+		.ref-num { display: block; font-size: 36px; font-weight: 700; color: var(--blue); line-height: 1.1; }
+		.ref-lbl { display: block; font-size: 15px; color: var(--muted); margin-top: 4px; }
+		.featured { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 24px; margin-bottom: 48px; }
+		.case { border: 1px solid var(--line); border-radius: 14px; padding: 28px; display: flex; flex-direction: column; }
+		.case-head { display: flex; align-items: center; gap: 18px; padding-bottom: 18px; border-bottom: 1px solid var(--line); margin-bottom: 18px; }
+		.case-head img { height: 52px; width: auto; max-width: 130px; object-fit: contain; flex: none; }
+		.case-head h3 { margin: 0; font-size: 24px; }
+		.case-meta { margin: 2px 0 0; font-size: 14px; color: var(--muted); }
+		.case dl { margin: 0 0 16px; }
+		.case dt { font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--blue); margin-top: 14px; }
+		.case dt:first-child { margin-top: 0; }
+		.case dd { margin: 4px 0 0; font-size: 15px; line-height: 1.6; color: var(--body); }
+		.case-link { margin-top: auto; font-weight: 600; }
+		.ref-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; margin-bottom: 40px; }
+		.ref { border: 1px solid var(--line); border-radius: 12px; padding: 22px; display: flex; flex-direction: column; }
+		.ref-logo { height: 52px; display: flex; align-items: center; margin-bottom: 16px; }
+		.ref-logo img { max-height: 52px; max-width: 150px; width: auto; height: auto; object-fit: contain; }
+		.ref-meta { margin: 0; font-size: 13px; color: var(--muted); }
+		.ref h4 { margin: 4px 0 2px; font-size: 19px; }
+		.ref-size { margin: 0 0 10px; font-size: 14px; color: var(--muted); }
+		.ref-mission { margin: 0; font-size: 15px; line-height: 1.55; color: var(--body); }
+		.ref-visit { margin-top: 12px; font-size: 14px; font-weight: 600; }
+		.logos { border: 1px solid var(--line); border-radius: 12px; padding: 24px; margin-bottom: 32px; }
 		.logos img { width: 100%; height: auto; }
 		.ref-links { display: flex; flex-wrap: wrap; gap: 16px; }
 		.ref-links a { border: 1px solid var(--line); border-radius: 10px; padding: 14px 20px; text-decoration: none; font-weight: 600; }
@@ -393,10 +416,115 @@
 	<!-- RÉFÉRENCES -->
 	<section id="references" class="wrap section references">
 		<h2 class="h2">References</h2>
-		<p class="intro">Bus strategy, contract and franchising work for authorities across Europe.</p>
-		<div class="logos">
-			<img src="images/Logos_clients.png" alt="Logos of the transport authorities we have worked for" />
+		<p class="intro">Selected experience of our founding firms, Trans-Missions and KCW, working for transport authorities across Europe.</p>
+
+		<div class="ref-stats">
+			<div><span class="ref-num">10</span><span class="ref-lbl">assignments for transport authorities</span></div>
+			<div><span class="ref-num">4</span><span class="ref-lbl">countries: France, Germany, Belgium, Finland</span></div>
+			<div><span class="ref-num">20M+</span><span class="ref-lbl">inhabitants served by these networks</span></div>
 		</div>
+
+		<div class="featured">
+			<article class="case">
+				<div class="case-head">
+					<img src="images/logo_sytral.png" alt="SYTRAL Mobilités" />
+					<div><h3>Lyon</h3><p class="case-meta">France · 2022–2025 · 1.9 million inhabitants</p></div>
+				</div>
+				<dl>
+					<dt>The challenge</dt><dd>A large and growing transport market, with several contracts to bring together under one customer brand and common service standards.</dd>
+					<dt>Our role</dt><dd>Strategic plan to split the network into two lots — heavy modes and buses — and delivery of the franchising scheme, including a public company for customer relations.</dd>
+					<dt>The outcome</dt><dd>The first competitive tender in France with two separate packages, designed to stimulate competition.</dd>
+				</dl>
+				<a href="#visits" class="case-link">See it on a study visit →</a>
+			</article>
+			<article class="case">
+				<div class="case-head">
+					<img src="images/logo_selestat.png" alt="Communauté de Communes de Sélestat" />
+					<div><h3>Sélestat</h3><p class="case-meta">France · 2022–2025 · 78,000 inhabitants</p></div>
+				</div>
+				<dl>
+					<dt>The challenge</dt><dd>Four rural districts needed to procure one bus network together, across a largely rural area.</dd>
+					<dt>Our role</dt><dd>Network development, including new demand-responsive services, and delivery of the franchising scheme for the new combined authority.</dd>
+					<dt>The outcome</dt><dd>Franchising for the first combined authority in France, with the new network now in operation.</dd>
+				</dl>
+				<a href="#visits" class="case-link">See it on a study visit →</a>
+			</article>
+		</div>
+
+		<h3 class="group">Franchising in cities and regions</h3>
+		<div class="ref-grid">
+			<div class="ref">
+				<div class="ref-logo"><img src="images/logo_idf.png" alt="Île-de-France Mobilités" /></div>
+				<p class="ref-meta">France · Since 2019</p>
+				<h4>Paris Region</h4>
+				<p class="ref-size">12 million inhabitants</p>
+				<p class="ref-mission">Competitive tendering for 15 bus lots.</p>
+			</div>
+			<div class="ref">
+				<div class="ref-logo"><img src="images/logo_karlsruhe.png" alt="Landkreis Karlsruhe" /></div>
+				<p class="ref-meta">Germany · Since 2011</p>
+				<h4>Karlsruhe</h4>
+				<p class="ref-size">300,000 inhabitants</p>
+				<p class="ref-mission">Ongoing support for a franchising authority in a mid-sized city.</p>
+			</div>
+			<div class="ref">
+				<div class="ref-logo"><img src="images/logo_tec.png" alt="TEC" /></div>
+				<p class="ref-meta">Belgium · 2016–2023</p>
+				<h4>Wallonia</h4>
+				<p class="ref-size">3.6 million inhabitants</p>
+				<p class="ref-mission">First competitive tender of subcontracted bus services in Wallonia.</p>
+			</div>
+		</div>
+
+		<h3 class="group">Small towns, rural areas and decarbonisation</h3>
+		<div class="ref-grid">
+			<div class="ref">
+				<div class="ref-logo"><img src="images/logo_narbonne.png" alt="Le Grand Narbonne" /></div>
+				<p class="ref-meta">France · 2022–2024</p>
+				<h4>Narbonne</h4>
+				<p class="ref-size">135,000 inhabitants</p>
+				<p class="ref-mission">Franchising combined with the decarbonisation of the bus fleet.</p>
+					<a href="#visits" class="ref-visit">Study visit available →</a>
+			</div>
+			<div class="ref">
+				<div class="ref-logo"><img src="images/logo_bautzen.png" alt="Landkreis Bautzen" /></div>
+				<p class="ref-meta">Germany · 2019–2021</p>
+				<h4>Bautzen District</h4>
+				<p class="ref-size">290,000 inhabitants</p>
+				<p class="ref-mission">A mix of competitive tendering and direct awards to smaller operators.</p>
+			</div>
+			<div class="ref">
+				<div class="ref-logo"><img src="images/logo_tec.png" alt="TEC" /></div>
+				<p class="ref-meta">Belgium · 2020–2024</p>
+				<h4>Wallonia</h4>
+				<p class="ref-size">27,000 students</p>
+				<p class="ref-mission">Franchising of school transport in rural areas.</p>
+			</div>
+		</div>
+
+		<h3 class="group">Municipal operators and strategic planning</h3>
+		<div class="ref-grid">
+			<div class="ref">
+				<div class="ref-logo"><img src="images/logo_berlin.png" alt="Berlin Senate Department for Mobility" /></div>
+				<p class="ref-meta">Germany · 2008–2024</p>
+				<h4>Berlin</h4>
+				<p class="ref-size">3.8 million inhabitants</p>
+				<p class="ref-mission">Management of a direct award to a municipal operator in a large city.</p>
+			</div>
+			<div class="ref">
+				<div class="ref-logo"><img src="images/logo_hsl.png" alt="HSL Helsinki Regional Transport" /></div>
+				<p class="ref-meta">Finland · 2024</p>
+				<h4>Helsinki</h4>
+				<p class="ref-size">675,000 inhabitants</p>
+				<p class="ref-mission">Strategic planning of urban rail procurement.</p>
+			</div>
+		</div>
+
+		<h3 class="group">Other authorities we have worked for</h3>
+		<div class="logos">
+			<img src="images/Logos_clients_autres.png" alt="Logos of other transport authorities our founding firms have worked for, including regions, departments and urban areas in France and Belgium" />
+		</div>
+
 		<div class="ref-links">
 			<a href="https://wcpp.org.uk/wp-content/uploads/2025/10/Dr-Didier-van-de-Velde-Netherlands-Analysing-public-transport-governance.pdf" target="_blank">Our primary UK reference (PDF)</a>
 			<a href="Ref_PT.pdf" download onclick="telechargerPublications(event)">Publications about us (PDF)</a>
