@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+<html lang="en">
 <head>
 	<title>Team Mobility UK | Bus Franchising & Transport Strategy Consultancy</title>
 	<meta charset="utf-8" />
@@ -51,9 +51,11 @@
 	<style>
 		/* Couleurs de la maquette : modifiez-les ici pour toute la page */
 		:root {
-			--accent: #9DC66B;      /* vert : boutons et bandeau contact */
-			--navy: #24356F;        /* bleu nuit : outils, pied de page */
-			--navy-card: #33478A;
+			--accent: #A1B929;      /* vert : boutons et bandeau contact */
+			--blue: #5274B9;        /* bleu : section outils, pied de page, bouton e-mail */
+			--blue-card: #4A69AA;   /* cartes de la section outils */
+			--blue-hover: #43619F;
+			--navy: #24356F;        /* bleu nuit : texte sur fond vert */
 			--ink: #2B3440;         /* texte principal */
 			--muted: #555555;
 			--body: #444444;
@@ -136,7 +138,7 @@
 		.person { display: flex; gap: 14px; align-items: center; background: #FFFFFF; border-radius: 12px; padding: 16px; text-decoration: none; color: var(--ink); }
 		.person:hover { color: var(--ink); box-shadow: 0 2px 10px rgba(36,53,111,0.12); }
 		.ini { width: 56px; height: 56px; flex: none; border-radius: 50%; background: var(--line); color: var(--navy); display: flex; align-items: center; justify-content: center; font-weight: 600; }
-		.ini.lead-ini { background: var(--navy); color: #FFFFFF; }
+		.ini.lead-ini { background: var(--blue); color: #FFFFFF; }
 		.p-name { font-weight: 600; }
 		.p-info { font-size: 13px; color: var(--muted); }
 
@@ -149,14 +151,14 @@
 		.visit a { font-weight: 600; margin-top: 8px; }
 
 		/* Outils */
-		.tools { background: var(--navy); color: #FFFFFF; }
+		.tools { background: var(--blue); color: #FFFFFF; }
 		.tools .h2 { margin-bottom: 40px; }
 		.tools-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; }
-		.tool { background: var(--navy-card); border-radius: 14px; padding: 32px; display: flex; flex-direction: column; gap: 12px; }
+		.tool { background: var(--blue-card); border-radius: 14px; padding: 32px; display: flex; flex-direction: column; gap: 12px; }
 		.tool h3 { margin: 0; font-size: 24px; }
-		.tool p { margin: 0; font-size: 16px; line-height: 1.6; color: #E3E9F5; }
-		.tool a { color: #C5E3A1; font-weight: 600; }
-		.tool a:hover { color: #FFFFFF; }
+		.tool p { margin: 0; font-size: 16px; line-height: 1.6; color: #FFFFFF; }
+		.tool a { color: #FFFFFF; font-weight: 600; }
+		.tool a:hover { color: #FFFFFF; opacity: 0.85; }
 
 		/* Références */
 		.references .intro { margin-bottom: 32px; }
@@ -172,15 +174,15 @@
 		.contact .wrap > div { flex: 1 1 480px; min-width: 0; }
 		.contact .h2 { color: var(--navy); }
 		.contact p { margin: 0; font-size: 17px; color: var(--ink); }
-		.btn-navy { background: var(--navy); color: #FFFFFF; text-decoration: none; font-weight: 600; padding: 16px 28px; border-radius: 8px; font-size: 17px; }
-		.btn-navy:hover { color: #FFFFFF; background: #1B2958; }
+		.btn-navy { background: var(--blue); color: #FFFFFF; text-decoration: none; font-weight: 600; padding: 16px 28px; border-radius: 8px; font-size: 17px; }
+		.btn-navy:hover { color: #FFFFFF; background: var(--blue-hover); }
 
 		/* Pied de page */
-		.footer { background: var(--navy); color: #E3E9F5; }
+		.footer { background: var(--blue); color: #FFFFFF; }
 		.footer .wrap { padding-top: 32px; padding-bottom: 32px; display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; font-size: 14px; }
 		.footer-links { display: flex; gap: 20px; }
-		.footer a { color: #E3E9F5; }
-		.footer a:hover { color: #FFFFFF; }
+		.footer a { color: #FFFFFF; }
+		.footer a:hover { color: #FFFFFF; opacity: 0.85; }
 
 		/* Téléphone */
 		@media (max-width: 600px) {
@@ -202,14 +204,6 @@
 			.btn-navy { font-size: 16px; padding: 14px 22px; }
 		}
 	</style>
-
-<!--[if gte mso 9]><xml>
-<mso:CustomDocumentProperties>
-<mso:_dlc_DocId msdt:dt="string">5TQF7KKPKRTY-1383703142-421593</mso:_dlc_DocId>
-<mso:_dlc_DocIdItemGuid msdt:dt="string">3aadced0-2114-49b6-89fc-533732d66151</mso:_dlc_DocIdItemGuid>
-<mso:_dlc_DocIdUrl msdt:dt="string">https://transmissionsfr.sharepoint.com/_layouts/15/DocIdRedir.aspx?ID=5TQF7KKPKRTY-1383703142-421593, 5TQF7KKPKRTY-1383703142-421593</mso:_dlc_DocIdUrl>
-</mso:CustomDocumentProperties>
-</xml><![endif]-->
 </head>
 <body>
 
