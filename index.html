@@ -39,7 +39,7 @@
 	    "@type": "Country",
 	    "name": "United Kingdom"
 	  },
-	  "sameAs": []
+	  "sameAs": ["https://www.linkedin.com/company/team-mobility-uk/"]
 	}
 	</script>
 
@@ -207,6 +207,12 @@
 		.contact p { margin: 0; font-size: 17px; color: var(--ink); }
 		.btn-navy { background: var(--blue); color: #FFFFFF; text-decoration: none; font-weight: 600; padding: 16px 28px; border-radius: 8px; font-size: 17px; }
 		.btn-navy:hover { color: #FFFFFF; background: var(--blue-hover); }
+		.contact .wrap > .contact-card { flex: 0 0 auto; }
+		.contact-card { display: flex; align-items: center; gap: 20px; background: #FFFFFF; border-radius: 14px; padding: 20px 24px; }
+		.contact-card img { width: 88px; height: 88px; border-radius: 50%; object-fit: cover; object-position: center top; flex: none; }
+		.contact .cc-label { margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+		.contact .cc-name { margin: 2px 0 12px; font-size: 22px; font-weight: 700; color: var(--navy); }
+		.contact-card .btn-navy { display: inline-block; font-size: 16px; padding: 12px 20px; }
 
 		/* Pied de page */
 		.footer { background: var(--blue); color: #FFFFFF; }
@@ -214,6 +220,37 @@
 		.footer-links { display: flex; gap: 20px; }
 		.footer a { color: #FFFFFF; }
 		.footer a:hover { color: #FFFFFF; opacity: 0.85; }
+
+		/* Barre de raccourcis */
+		[id] { scroll-margin-top: 72px; }
+		.quicknav { position: fixed; top: 0; left: 0; right: 0; z-index: 50; background: rgba(255,255,255,0.97); box-shadow: 0 2px 12px rgba(36,53,111,0.12); transform: translateY(-110%); transition: transform 0.25s ease; }
+		.quicknav.is-visible { transform: translateY(0); }
+		.quicknav-inner { display: flex; align-items: center; gap: 24px; height: 60px; }
+		.quicknav-brand { font-family: 'Varela Round', 'Source Sans 3', sans-serif; font-size: 18px; color: var(--navy); text-decoration: none; white-space: nowrap; }
+		.quicknav-brand span { font-family: 'Source Sans 3', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.12em; border: 1px solid var(--navy); border-radius: 4px; padding: 1px 5px; margin-left: 4px; vertical-align: 2px; }
+		.quicknav-links { display: flex; gap: 22px; font-size: 15px; flex: 1; overflow-x: auto; scrollbar-width: none; }
+		.quicknav-links::-webkit-scrollbar { display: none; }
+		.quicknav-links a { color: var(--ink); text-decoration: none; white-space: nowrap; padding: 6px 0; border-bottom: 2px solid transparent; }
+		.quicknav-links a:hover { color: var(--link); }
+		.quicknav-links a.is-active { color: var(--link); border-bottom-color: var(--accent); font-weight: 600; }
+		.quicknav-cta { padding: 9px 16px; font-size: 15px; white-space: nowrap; }
+
+		/* News */
+		.news { background: var(--light); }
+		.news-head { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px 32px; margin-bottom: 40px; }
+		.news-head .intro { margin-bottom: 0; }
+		.news-follow { border: 1px solid var(--line); background: #FFFFFF; border-radius: 10px; padding: 12px 18px; text-decoration: none; font-weight: 600; white-space: nowrap; }
+		.news-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+		.news-item { background: #FFFFFF; border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 8px; }
+		.news-item.is-hidden { display: none; }
+		.news-meta { margin: 0; font-size: 13px; color: var(--muted); }
+		.news-tag { font-weight: 600; color: var(--link); }
+		.news-new { display: inline-block; margin-left: 6px; background: var(--accent); color: var(--navy); font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; border-radius: 999px; padding: 2px 8px; vertical-align: 1px; }
+		.news-item h3 { margin: 0; font-size: 18px; line-height: 1.3; }
+		.news-item p:not(.news-meta) { margin: 0; font-size: 15px; line-height: 1.55; color: var(--body); }
+		.news-item a { margin-top: auto; padding-top: 6px; font-weight: 600; font-size: 15px; }
+		.news-more { display: block; margin: 28px auto 0; background: #FFFFFF; border: 1px solid var(--line); border-radius: 10px; padding: 12px 22px; font: inherit; font-weight: 600; color: var(--link); cursor: pointer; }
+		.news-more:hover { background: var(--line); }
 
 		/* Téléphone */
 		@media (max-width: 600px) {
@@ -233,10 +270,33 @@
 			.contact .wrap { padding-top: 56px; padding-bottom: 56px; }
 			.contact .wrap > div { flex-basis: 100%; }
 			.btn-navy { font-size: 16px; padding: 14px 22px; }
+			.quicknav-inner { gap: 14px; height: 54px; }
+			.quicknav-brand, .quicknav-cta { display: none; }
+			.quicknav-links { gap: 18px; font-size: 14px; }
+			[id] { scroll-margin-top: 62px; }
+			.contact-card { width: 100%; padding: 18px; gap: 16px; }
+			.contact-card img { width: 72px; height: 72px; }
+			.contact-card .btn-navy { font-size: 15px; padding: 11px 16px; }
 		}
 	</style>
 </head>
 <body>
+
+	<!-- BARRE DE RACCOURCIS : apparaît en haut de l'écran dès qu'on fait défiler la page -->
+	<div class="quicknav" id="quicknav">
+		<div class="wrap quicknav-inner">
+			<a href="#" class="quicknav-brand">team mobility <span>UK</span></a>
+			<nav class="quicknav-links" aria-label="Sections">
+				<a href="#offer">What we do</a>
+				<a href="#team">Our team</a>
+				<a href="#visits">Study visits</a>
+				<a href="#tools">Tools</a>
+				<a href="#news">News</a>
+				<a href="#references">References</a>
+			</nav>
+			<a href="#contact" class="btn-accent quicknav-cta">Talk to us</a>
+		</div>
+	</div>
 
 	<!-- EN-TÊTE : menu + accroche -->
 	<header class="header">
@@ -253,6 +313,7 @@
 				<a href="#team">Our team</a>
 				<a href="#visits">Study visits</a>
 				<a href="#tools">Tools</a>
+				<a href="#news">News</a>
 				<a href="#references">References</a>
 			</nav>
 			<a href="#contact" class="btn-accent">Talk to us</a>
@@ -293,6 +354,75 @@
 		<div class="about-box">
 			<h3>Active in the UK bus community</h3>
 			<p>Close links with the <a href="https://www.buscentreofexcellence.org.uk/" target="_blank">Bus Centre of Excellence</a> and active members of its Bus Franchising Group. Speakers at Quality Bus and Quality Rural Bus conferences on franchising practice, DRT in France and free public transport in continental Europe.</p>
+		</div>
+	</section>
+
+	<!-- NEWS
+	     Pour ajouter une actualité : copiez un bloc <article> ... </article> complet,
+	     collez-le EN PREMIER dans la liste, puis changez la date (data-date et datetime au format AAAA-MM-JJ),
+	     la date affichée, l'étiquette, le titre, le texte et le lien.
+	     Les 4 plus récentes s'affichent ; les autres apparaissent avec le bouton « Show all news ».
+	     Le badge « New » s'affiche tout seul pendant 30 jours. -->
+	<section id="news" class="news">
+		<div class="wrap section">
+			<div class="news-head">
+				<div>
+					<h2 class="h2">News</h2>
+					<p class="intro">Events, publications and new services from Team Mobility UK.</p>
+				</div>
+				<a href="https://www.linkedin.com/company/team-mobility-uk/" target="_blank" rel="noopener" class="news-follow">Follow us on LinkedIn</a>
+			</div>
+			<div class="news-grid" id="news-list">
+			<article class="news-item" data-date="2026-11-27">
+				<p class="news-meta"><time datetime="2026-11-27">27 November 2026</time> · <span class="news-tag">Study visit</span></p>
+				<h3>Study visits for 2027: see how Sélestat franchised a rural bus network</h3>
+				<p>Four rural districts in Alsace merged into one transport authority in 2024 and now run a single franchised bus network with new demand-responsive transport. One-day visits in English, dates on request.</p>
+				<a href="https://www.linkedin.com/feed/update/urn:li:activity:7532021509289062400/" target="_blank" rel="noopener">Read on LinkedIn →</a>
+			</article>
+			<article class="news-item" data-date="2026-11-20">
+				<p class="news-meta"><time datetime="2026-11-20">20 November 2026</time> · <span class="news-tag">Tool</span></p>
+				<h3>Greening your bus fleet: the TM Fleet Transition Model</h3>
+				<p>Compares every low and zero-emission option, including charging strategies, and sets out capital and operating costs to support your fleet strategy.</p>
+				<a href="#tools">See our tools →</a>
+			</article>
+			<article class="news-item" data-date="2026-11-12">
+				<p class="news-meta"><time datetime="2026-11-12">12 November 2026</time> · <span class="news-tag">Tool</span></p>
+				<h3>Reviewing your bus network: the TM Network Planning Model</h3>
+				<p>Brings together service levels and potential demand to map challenges and opportunities, and to compare network redesign options area by area.</p>
+				<a href="#tools">See our tools →</a>
+			</article>
+			<article class="news-item" data-date="2026-11-03">
+				<p class="news-meta"><time datetime="2026-11-03">3–5 November 2026</time> · <span class="news-tag">Event</span></p>
+				<h3>Team Mobility at Euro Bus Expo, Birmingham</h3>
+				<p>We were at the NEC for Euro Bus Expo, where bus devolution was a new theme this year, to share our UK and international experience.</p>
+				<a href="https://www.linkedin.com/feed/update/urn:li:activity:7521907434672713729/" target="_blank" rel="noopener">Read on LinkedIn →</a>
+			</article>
+			<article class="news-item" data-date="2026-10-28">
+				<p class="news-meta"><time datetime="2026-10-28">28 October 2026</time> · <span class="news-tag">Webinar</span></p>
+				<h3>Andy Gibbons on Leicester's 'One Network' Enhanced Partnership</h3>
+				<p>At a Bus Centre of Excellence webinar, Andy Gibbons presented One Network in Leicester, an example of an ambitious Enhanced Partnership. The recording is available.</p>
+				<a href="https://www.linkedin.com/feed/update/urn:li:activity:7521603235086815232/" target="_blank" rel="noopener">Watch the recording →</a>
+			</article>
+			<article class="news-item" data-date="2026-10-28">
+				<p class="news-meta"><time datetime="2026-10-28">October 2026</time> · <span class="news-tag">Event</span></p>
+				<h3>Meeting buyers at the Department for Transport's supplier events</h3>
+				<p>We took part in the DfT's SME and VCSE events in Bournemouth and Cambridge to meet public buyers and fellow suppliers.</p>
+				<a href="https://www.linkedin.com/feed/update/urn:li:activity:7521261748012818433/" target="_blank" rel="noopener">Read on LinkedIn →</a>
+			</article>
+			<article class="news-item" data-date="2026-10-20">
+				<p class="news-meta"><time datetime="2026-10-20">October 2026</time> · <span class="news-tag">Publication</span></p>
+				<h3>The French and German franchising models in Passenger Transport</h3>
+				<p>Our articles for Passenger Transport magazine explain how bus franchising works in France and Germany, and what UK authorities can learn from them.</p>
+				<a href="https://www.linkedin.com/feed/update/urn:li:activity:7518327795090071552/" target="_blank" rel="noopener">Read on LinkedIn →</a>
+			</article>
+			<article class="news-item" data-date="2026-09-10">
+				<p class="news-meta"><time datetime="2026-09-10">10 September 2026</time> · <span class="news-tag">Event</span></p>
+				<h3>Sponsor of the UK Bus Summit, Liverpool</h3>
+				<p>Team Mobility sponsored the UK Bus Summit, which brought together around 300 people working to transform bus services for communities.</p>
+				<a href="https://www.linkedin.com/feed/update/urn:li:activity:7504116287791423490/" target="_blank" rel="noopener">Read on LinkedIn →</a>
+			</article>
+			</div>
+			<button type="button" class="news-more" id="news-more" hidden>Show all news</button>
 		</div>
 	</section>
 
@@ -538,7 +668,14 @@
 				<h2 class="h2">Planning a franchising assessment or a new bus strategy?</h2>
 				<p>Tell us about your authority and we will put the right team together.</p>
 			</div>
-			<a href="mailto:contact@team-mobility.uk" class="btn-navy">contact@team-mobility.uk</a>
+			<div class="contact-card">
+				<img src="images/ALE.jpg" alt="Arnaud Léger" />
+				<div>
+					<p class="cc-label">Your contact</p>
+					<p class="cc-name">Arnaud Léger</p>
+					<a href="mailto:contact@team-mobility.uk?subject=For%20the%20attention%20of%20Arnaud%20L%C3%A9ger" class="btn-navy">contact@team-mobility.uk</a>
+				</div>
+			</div>
 		</div>
 	</section>
 
@@ -546,7 +683,7 @@
 	<footer class="footer">
 		<div class="wrap">
 			<span>&copy; 2026 Trans-Missions, trading as Team Mobility UK. All rights reserved.</span>
-			<span class="footer-links"><a href="Legal Information.pdf" target="_blank">Legal information</a></span>
+			<span class="footer-links"><a href="https://www.linkedin.com/company/team-mobility-uk/" target="_blank" rel="noopener">LinkedIn</a><a href="Legal Information.pdf" target="_blank">Legal information</a></span>
 		</div>
 	</footer>
 
@@ -566,6 +703,65 @@
 				}, i * 800);
 			});
 		}
+	</script>
+
+	<!-- Barre de raccourcis et rubrique News -->
+	<script>
+		(function () {
+			// Barre de raccourcis : visible dès que l'en-tête est dépassé
+			var bar = document.getElementById("quicknav");
+			var header = document.querySelector(".header");
+			function toggleBar() {
+				bar.classList.toggle("is-visible", window.scrollY > header.offsetHeight - 60);
+			}
+			window.addEventListener("scroll", toggleBar, { passive: true });
+			toggleBar();
+
+			// Lien de la section en cours mis en évidence
+			var links = bar.querySelectorAll(".quicknav-links a");
+			if ("IntersectionObserver" in window) {
+				var observer = new IntersectionObserver(function (entries) {
+					entries.forEach(function (entry) {
+						if (!entry.isIntersecting) return;
+						links.forEach(function (a) {
+							a.classList.toggle("is-active", a.getAttribute("href") === "#" + entry.target.id);
+						});
+					});
+				}, { rootMargin: "-45% 0px -50% 0px" });
+				links.forEach(function (a) {
+					var section = document.querySelector(a.getAttribute("href"));
+					if (section) observer.observe(section);
+				});
+			}
+
+			// News : du plus récent au plus ancien, badge « New », 4 visibles puis « Show all news »
+			var list = document.getElementById("news-list");
+			var more = document.getElementById("news-more");
+			var items = Array.prototype.slice.call(list.querySelectorAll(".news-item"));
+			items.sort(function (a, b) { return b.dataset.date.localeCompare(a.dataset.date); });
+			items.forEach(function (item) { list.appendChild(item); });
+			var now = new Date();
+			items.forEach(function (item, i) {
+				var age = (now - new Date(item.dataset.date)) / 86400000;
+				if (age >= 0 && age < 30) {
+					var badge = document.createElement("span");
+					badge.className = "news-new";
+					badge.textContent = "New";
+					item.querySelector(".news-meta").appendChild(badge);
+				}
+				if (i >= 4) item.classList.add("is-hidden");
+			});
+			if (items.length > 4) {
+				more.hidden = false;
+				more.textContent = "Show all news (" + items.length + ")";
+				more.addEventListener("click", function () {
+					var open = more.getAttribute("aria-expanded") === "true";
+					items.forEach(function (item, i) { if (i >= 4) item.classList.toggle("is-hidden", open); });
+					more.setAttribute("aria-expanded", String(!open));
+					more.textContent = open ? "Show all news (" + items.length + ")" : "Show fewer";
+				});
+			}
+		})();
 	</script>
 
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "4d18bc7926b34fa289647e480066c2b0"}'></script><!-- End Cloudflare Web Analytics -->
